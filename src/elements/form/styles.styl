@@ -1,0 +1,112 @@
+
+.form {
+    .textarea-material .textarea {
+        padding: 7px 0;
+        border: none;
+        background: none;
+        color: #5d5d5e;
+        border-radius: 0;
+        border-bottom: 1px solid #c9c9c9;
+        height: 154px;
+        line-height: 1.4em;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .input-material ~ .form-label,
+    .textarea-material ~ .form-label,
+    .suggest-material ~ .form-label {
+        position: absolute;
+        pointer-events: none;
+        left: 0;
+        top: 10px;
+        transition: 0.2s top ease, 0.2s font-size ease;
+        font-size: 1rem;
+        margin: 0;
+
+        label {
+            font-weight: 400;
+            color: #a5a5a5;
+        }
+    }
+    .suggest-material.focus ~ .form-label,
+    .suggest-material.value ~ .form-label,
+    .textarea-material.focus ~ .form-label,
+    .textarea-material.value ~ .form-label,
+    .input-material.focus ~ .form-label,
+    .input-material.value ~ .form-label {
+        top:-16px;
+        font-size: 0.875rem;
+        margin: 0;
+    }
+    
+    .form-label {
+        font-size: 12px;
+        margin: 0 0 10px;
+        color: #8a8a8a;
+    }
+
+    .select-container {
+        position: relative;
+
+        .select {
+            -webkit-appearance: none;
+
+            /* for FF */
+            -moz-appearance: none;
+            text-indent: 0.01px; 
+            text-overflow: '';
+            /* for IE */
+            -ms-appearance: none;
+            appearance: none!important;
+            cursor: pointer;
+            padding-right: 45px!important;
+            
+
+            &::-ms-expand {
+                display: none;
+            }
+
+            &.lg {
+                font-size: 14px!important;
+            }
+
+            &:focus {
+                position: static;
+            }
+        }
+
+        &:after {
+            pointer-events: none;
+            content: ""
+            background-image: url("./images/select-arrow.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            margin-top: -10px;
+            display: block;
+            width 20px
+            height 20px;
+            z-index: 3;
+        }
+    }
+}
+
+div.radio label {
+    cursor: pointer;
+
+    &:before {
+        top: 4px;
+    }
+}
+
+div.input-calendar {
+    .input-container {
+        cursor: pointer;
+    }
+    .icon {
+        top: 8px;
+    }
+}

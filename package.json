@@ -1,0 +1,114 @@
+{
+  "name": "socket-chat",
+  "version": "0.1.0",
+  "description": "Socket Chat",
+  "main": "/index.js",
+  "scripts": {
+    "build": "NODE_ENV=production && webpack -p --display-error-details --colors",
+    "postinstall": "NODE_ENV=production && webpack -p --display-error-details --colors",
+    "start": "NODE_ENV=production && node server/server.js",
+    "hot": "webpack-dev-server --config webpack.config.hot.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:drzoom3/chat.git"
+  },
+  "author": "drz",
+  "license": "ISC",
+  "engines": {
+    "node": ">8.9.3"
+  },
+  "dependencies": {
+    "assets-webpack-plugin": "^3.5.1",
+    "autoprefixer": "^6.7.5",
+    "axios": "^0.14.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-react-intl": "^2.3.1",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "babel-runtime": "^6.23.0",
+    "body-parser": "^1.15.2",
+    "css-loader": "^0.28.7",
+    "eslint": "^3.18.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^6.10.0",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "https://registry.npmjs.org/file-loader/-/file-loader-0.9.0.tgz",
+    "html-loader": "https://registry.npmjs.org/html-loader/-/html-loader-0.4.5.tgz",
+    "html-webpack-plugin": "^2.28.0",
+    "intl": "^1.2.5",
+    "moment": "^2.18.0",
+    "postcss-loader": "^2.0.9",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-cookie": "^1.0.4",
+    "react-document-meta": "^2.1.1",
+    "react-dom": "^16.2.0",
+    "react-intl": "^2.4.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-tap-event-plugin": "^3.0.2",
+    "react-transition-group": "^2.2.1",
+    "redux": "^3.7.2",
+    "redux-logger": "^2.8.1",
+    "redux-thunk": "^2.2.0",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "style-loader": "^0.19.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "url-loader": "^0.6.2",
+    "vow": "^0.4.12",
+    "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-jest": "^22.4.3",
+    "jest": "^22.4.3",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "react-test-renderer": "^16.3.1",
+    "regenerator-runtime": "^0.11.1",
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-dev-server": "^2.4.1",
+    "webpack-hot-middleware": "^2.17.0"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    },
+    "globals": {
+      "__DEV__": true,
+      "CONFIG": {
+        "site_url": "/"
+      }
+    },
+    "testURL": "http://localhost/",
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-jam-ui))"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/_mocks/file.js",
+      "\\.(css|less|styl)$": "<rootDir>/_mocks/style.js"
+    }
+  }
+}

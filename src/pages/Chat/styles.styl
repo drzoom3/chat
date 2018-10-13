@@ -1,0 +1,56 @@
+.page--chat {
+    display: flex;
+    flex-direction: column;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+   .chat {
+        display: flex;
+        flex-direction: column;        
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        min-height: 0;
+
+        &-list {
+            flex: 1 1 100%;
+            overflow: auto;
+            border: 1px solid #656565;
+            padding: 15px;
+            min-height: 0;
+        }
+        &-message {
+            flex: 0 0 auto;
+            padding: 20px;
+            background: #e7e1f3;
+            border: 1px solid #999999;
+
+            textarea {
+                display: block;
+                width: 100%;
+                height: 100px;
+                border: 2px solid #656565;
+                background: #FFFFFF;
+                outline: none;
+            }
+
+            button {
+                margin: 10px 0 0;
+            }
+        }
+
+        &-users {
+            margin: 10px 0 0;
+            
+            b {
+                margin-right: 10px;
+            }
+        }
+    }
+}

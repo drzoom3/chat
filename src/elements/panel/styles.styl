@@ -1,0 +1,39 @@
+$paddingLeft = 25px;
+$paddingRight = 25px;
+
+.panel {
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+
+    &-title {
+        font-size: 1.375rem;
+        color: #06213B;
+        font-weight: 500;
+        line-height: 1.2em;
+    }
+
+    &-header {
+        padding-left: $paddingLeft;
+        padding-right: $paddingRight;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba(6, 33, 59, 0.1);
+        position: relative;
+    }
+    &-body {
+        padding-left: $paddingLeft;
+        padding-right: $paddingRight;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        position: relative;
+    }
+    &-footer {
+        padding-left: $paddingLeft;
+        padding-right: $paddingRight;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        position: relative;
+        border-top: 1px solid rgba(6, 33, 59, 0.1);
+    }
+}

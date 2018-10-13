@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Render 1`] = `
+<div
+  className="page page--home"
+>
+  <div
+    className="container"
+  >
+    <div>
+      <div>
+        <Link
+          replace={false}
+          to="/11"
+        >
+          11
+        </Link>
+      </div>
+    </div>
+    <button
+      onClick={[Function]}
+    >
+      Создать комнату
+    </button>
+  </div>
+</div>
+`;

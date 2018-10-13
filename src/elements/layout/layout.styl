@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&subset=cyrillic');
+
+@import '../panel/styles.styl'
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+::selection {
+    background: #ed8323;
+    color: #fff;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #4a4a4a;
+    font-size: 14px;
+    line-height: 1.43em;
+    font-weight: 400;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "sans-serif";
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #73a2f9;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+
+    .col {
+        flex: 1 1 auto;
+    }
+}
+
+.pull-left {
+    float: left!important;
+}
+.pull-right {
+    float: right!important;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 500px;
+}
+
+.page {
+    flex: 1;
+    position: relative;
+}
+.container {
+    max-width: 600px;
+    padding: 0 15px;
+    position: relative;
+    margin: 0 auto;
+}
