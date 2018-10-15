@@ -10,6 +10,13 @@ import {
   END_WRITE_SUCCESS
 } from '../../constants/chat';
 
+/* const socket = null;
+
+export const startChatSocket = url => {
+  return dispatch => {
+  }
+} */
+
 export const getChatsListSuccess = list => ({
   type: CHATS_SUCCESS,
   list

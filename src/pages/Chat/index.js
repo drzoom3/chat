@@ -31,7 +31,7 @@ export class Chat extends React.Component {
         const storageUser = localStorage.getItem('user')
         const user = storageUser ? JSON.parse(storageUser) : this.getNewUser()
         
-        this.socket = io(`${CONFIG.api_url}/socket/chat`, { forceNew: true })
+        this.socket = io(`${CONFIG.api_url}/socket/chat`)
 
         this.state = {
             message: '',
@@ -82,7 +82,7 @@ export class Chat extends React.Component {
         const { user, chatID } = this.state
 
         if (chatID) this.socket.emit('leave', { user, chatID })
-        
+        this.socket.close()
         window.removeEventListener('beforeunload', this.onUnload)
     }
 

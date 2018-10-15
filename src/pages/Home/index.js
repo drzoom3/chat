@@ -15,9 +15,9 @@ import './styles.styl';
 export class Home extends React.Component {
     constructor(props) {
         super();
-
-        this.socket = io(`${CONFIG.api_url}/socket/chat`, { forceNew: true });
-
+        
+        this.socket = io(`${CONFIG.api_url}/socket/chat`);
+console.log(this.socket)
         this.state = {
         }
         
@@ -35,6 +35,10 @@ export class Home extends React.Component {
         });
         
         this.socket.emit('chats');
+    }
+
+    componentWillUnmount() {        
+        this.socket.close()
     }
     
     onAddChat = e => {

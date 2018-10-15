@@ -3,7 +3,7 @@ const ChatHelper = require('../helpers/chat.helper')
 module.exports = io => {
     const socketChat = io.of('/socket/chat')
 
-    socketChat.on('connection', socket => {        
+    socketChat.on('connection', socket => {     
         socket.on('chats', () => {
             ChatHelper.getChats().then( chats => {
                 socket.emit('chats', chats)
