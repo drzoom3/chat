@@ -17,7 +17,7 @@ export class Home extends React.Component {
         super();
         
         this.socket = io(`${CONFIG.api_url}/socket/chat`);
-console.log(this.socket)
+        
         this.state = {
         }
         
